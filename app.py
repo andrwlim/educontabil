@@ -3,12 +3,16 @@ from pymongo import MongoClient
 import openai
 from bson.objectid import ObjectId
 import re
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 app = Flask(__name__)
 
-openai.api_key = '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'
+openai.api_key = os.getenv('API_KEY')
 
-uri = "mongodb+srv://andrwlim:7WbPRvKn0eSu7Bgn@cluster0.hzspxuv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+uri = os.getenv('uriMongoDB')
+
 client = MongoClient(uri)
 db = client['educontabil']
 posts_collection = db['posts']
@@ -116,4 +120,4 @@ def add_post():
     return render_template('add_post.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
