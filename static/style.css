@@ -1,0 +1,165 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 900; 
+}
+
+p, span, a, li {
+    font-family: 'Open Sans', sans-serif; 
+}
+
+.financial-education {
+    background-color: #f5f5f5;
+}
+
+.navbar {
+    background-color: #28a745;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.nav-link {
+    margin-right: 1rem;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.nav-link:hover::after,
+.nav-item.active .nav-link::after {
+    width: 100%;
+}
+
+.nav-item.active .nav-link {
+    color: #fff;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+}
+
+.container {
+    padding: 0 15px;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.chat-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.chat-box {
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.chat-input-container {
+    margin-top: 10px;
+}
+
+.message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 60%;
+    clear: both;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.user-message {
+    background-color: #28a745;
+    color: #fff;
+    float: right;
+    text-align: right;
+}
+
+.bot-message {
+    color: #000;
+    float: left;
+    text-align: left;
+}
+
+.sender-label {
+    font-weight: bold;
+    display: none;
+}
+
+.jumbotron {
+    background-color: #fff;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: .3rem;
+}
+
+.card-header {
+    font-weight: bold;
+}
+
+.carousel-inner img {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+    .jumbotron {
+        padding: 1rem;
+    }
+
+    .carousel-inner img {
+        height: 200px;
+    }
+}
+
+.btn-success:active, .btn-success:focus {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.card-img-top {
+    border-radius: 15px;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .nav-link {
+        margin: 0.5rem 0; 
+    }
+}

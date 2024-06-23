@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduContábil</title>
+    <link rel="icon" href="{{ url_for('static', filename='edu2.png') }}" type="image/png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+</head>
+<body class="financial-education">
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <a class="navbar-brand text-white font-poppins-black" href="/">EduContábil</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="/">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/financial_education">Edu</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <div class="container">
+        <h2 class="mt-4">Posts do Blog</h2>
+        <ul class="list-group">
+            {% for post in posts %}
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img src="{{ post['cover'] }}" class="img-fluid rounded" alt="...">
+                    </div>
+                    <div class="col-md-10">
+                        <h3>{{ post['title'] }}</h3>
+                        <p>{{ post['description'] }}</p>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+    <footer class="bg-success text-white text-center py-3 mt-4">
+        <p>Aplicativo EduContábil</p>
+        <p>Todos os direitos reservados</p>
+        <p>André Lima de Araújo - RU: 4544447</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
